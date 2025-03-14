@@ -1,0 +1,66 @@
+/* Global Styles */
+@font-face {
+    font-family: Recursive;
+    src: url('../assets/Recursive-font/Recursive.ttf') format('truetype');
+}
+
+:root {
+    --primary-color: #09122C;
+    --secondary-color: #872341;
+    --tertiary-color: #BE3144;
+    --light-color: #E17564;
+    --text-color: #FFFFFF;
+    --primary-font: 'Recursive';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+    color: var(--text-color);
+    /* need to find a better way to do this */
+    font-variation-settings: 'CRSV' 1;
+}
+
+title{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: var(--primary-font);
+}
+
+body {
+    background-color: var(--primary-color);
+    box-sizing: border-box;
+}
+
+head{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.social-icons{ 
+    padding:0rem 1rem 0rem 1rem;
+    width: 14%;
+}
+
