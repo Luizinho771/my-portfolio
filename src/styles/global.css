@@ -1,7 +1,7 @@
 /* Global Styles */
 @font-face {
     font-family: Recursive;
-    src: url('public\assets\Recursive-font\Recursive.ttf') format('truetype'); 
+    src: url('/public/assets/Recursive-font/Recursive.ttf') format('truetype'); 
 }
 
 :root {
