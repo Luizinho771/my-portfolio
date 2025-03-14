@@ -1,7 +1,7 @@
 /* Global Styles */
 @font-face {
     font-family: Recursive;
-    src: url('../public/assets/Recursive-font/Recursive.ttf') format('truetype');
+    src: url('/public/assets/Recursive-font/Recursive.ttf') format('truetype');
 }
 
 :root {
@@ -16,30 +16,16 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: var(--primary-font);
     color: var(--text-color);
     /* need to find a better way to do this */
     font-variation-settings: 'CRSV' 1;
 }
 
-title{
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-family: var(--primary-font);
-}
-
 body {
     background-color: var(--primary-color);
     box-sizing: border-box;
-}
-
-head{
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-align: center;
 }
 
 main {
@@ -61,6 +47,6 @@ footer{
 
 .social-icons{ 
     padding:0rem 1rem 0rem 1rem;
-    width: 14%;
+    width: 25%;
 }
 
