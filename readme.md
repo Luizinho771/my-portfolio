@@ -22,7 +22,7 @@ Welcome to my personal portfolio project, build to showcase my development proje
 ## 🧠 Project Planning & Design
 
 - 🎨 **Figma Mockup**: [View design on Figma](https://www.figma.com/proto/jDocbSE0UT0S5mqZhGOo6b/web-portifolio?node-id=109-95&p=f&t=a0Ay1aun60GJK1kO-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=109%3A95)
-<!--> - ✅ **Trello Board**: [Development Kanban Board](https://trello.com/b/your-board) -->
+<!-- - ✅ **Trello Board**: [Development Kanban Board](https://trello.com/b/your-board) -->
 
 ---
 
