@@ -52,6 +52,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* If JS never runs (or fails), reveal-animated content must not stay hidden.
+   The inline script in layout removes .no-js immediately when JS is enabled. */
+html.no-js [data-reveal] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 body {
   background: var(--primary);
   color: var(--text);

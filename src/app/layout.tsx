@@ -32,14 +32,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${recursive.variable} h-full antialiased`}
+      className={`${recursive.variable} no-js h-full antialiased`}
       suppressHydrationWarning
     >
       <head>
         <script
           // Apply persisted theme/mono before first paint to avoid FOUC
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;var m=localStorage.getItem("mono");if(m==="off")document.documentElement.dataset.mono="off";}catch(e){}})();`,
+            __html: `document.documentElement.classList.remove("no-js");(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;var m=localStorage.getItem("mono");if(m==="off")document.documentElement.dataset.mono="off";}catch(e){}})();`,
           }}
         />
       </head>
