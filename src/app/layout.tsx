@@ -10,8 +10,18 @@ const recursive = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://lzpaulo.com"),
   title: "Luiz Paulo",
-  description: "Luiz Paulo's personal portfolio",
+  description:
+    "Luiz Paulo's personal portfolio — projects, skills, and interests.",
+  openGraph: {
+    title: "Luiz Paulo",
+    description:
+      "Luiz Paulo's personal portfolio — projects, skills, and interests.",
+    url: "https://lzpaulo.com",
+    siteName: "Luiz Paulo",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
