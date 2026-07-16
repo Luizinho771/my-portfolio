@@ -1,7 +1,8 @@
 import Reveal from "@/components/Reveal";
 
-/* Scattered doodle pattern for the About Me band, matching the Figma texture */
-const doodlePattern = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.12'%3E%3Ccircle cx='20' cy='28' r='3'/%3E%3Cpath d='M70 12l6 10h-12z'/%3E%3Cpath d='M110 40h10M115 35v10'/%3E%3Crect x='30' y='90' width='7' height='7' transform='rotate(45 33 93)'/%3E%3Cpath d='M90 100l8 8M98 100l-8 8'/%3E%3Ccircle cx='125' cy='120' r='2.5'/%3E%3Cpath d='M10 125l5 8h-10z'/%3E%3C/g%3E%3C/svg%3E")`;
+/* Scattered doodle pattern for the About Me band, recreated from the Figma tile:
+   outline circles, triangles, diamonds, arcs, brackets, bolts, slashes, dots */
+const doodlePattern = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='220'%3E%3Cg fill='none' stroke='%23ffb6c1' stroke-opacity='0.22' stroke-width='1.3'%3E%3Ccircle cx='36' cy='14' r='6'/%3E%3Cpath d='M96 6l7 14h-14z'/%3E%3Cpath d='M160 10l-8 12'/%3E%3Ccircle cx='222' cy='18' r='6'/%3E%3Cpath d='M14 52l6-10'/%3E%3Cpath d='M62 44l6 10-12 2z'/%3E%3Crect x='118' y='40' width='9' height='9' transform='rotate(45 122 44)'/%3E%3Cpath d='M186 46h12'/%3E%3Cpath d='M244 40l-3 12'/%3E%3Cpath d='M28 84a8 8 0 0 1 14-4'/%3E%3Cpath d='M88 78l4 7-8 1z'/%3E%3Cpath d='M138 90l8-14'/%3E%3Cpath d='M196 76a7 7 0 0 0-2 12'/%3E%3Cpath d='M236 88v-12l8 6z'/%3E%3Cpath d='M12 118l10 2-6 8z'/%3E%3Cpath d='M66 124v-12h5'/%3E%3Ccircle cx='122' cy='120' r='4'/%3E%3Cpath d='M172 112l4-3-1 5 4-2-5 8'/%3E%3Cpath d='M226 118l-10 8'/%3E%3Cpath d='M40 158l-2 12h8'/%3E%3Crect x='94' y='152' width='6' height='13' transform='rotate(20 97 158)'/%3E%3Cpath d='M148 162a8 8 0 0 1 12-6'/%3E%3Cpath d='M200 150l7 12h-14z'/%3E%3Ccircle cx='250' cy='162' r='3'/%3E%3Cpath d='M20 198l8-10'/%3E%3Ccircle cx='74' cy='196' r='6'/%3E%3Cpath d='M128 190l4-3-1 5 4-2-5 8'/%3E%3Crect x='176' y='190' width='9' height='9' transform='rotate(45 180 194)'/%3E%3Cpath d='M232 200h12'/%3E%3C/g%3E%3Cg fill='%23ffb6c1' fill-opacity='0.2'%3E%3Ccircle cx='68' cy='20' r='1.6'/%3E%3Ccircle cx='140' cy='28' r='1.6'/%3E%3Ccircle cx='200' cy='58' r='1.6'/%3E%3Ccircle cx='50' cy='102' r='1.6'/%3E%3Ccircle cx='110' cy='142' r='1.6'/%3E%3Ccircle cx='246' cy='130' r='1.6'/%3E%3Ccircle cx='158' cy='206' r='1.6'/%3E%3Ccircle cx='16' cy='160' r='1.6'/%3E%3C/g%3E%3C/svg%3E")`;
 
 export default function About() {
   return (
@@ -27,8 +28,8 @@ export default function About() {
       </div>
 
       <div
-        className="w-full bg-secondary py-24"
-        style={{ backgroundImage: doodlePattern }}
+        className="w-full py-24"
+        style={{ backgroundColor: "#a02348", backgroundImage: doodlePattern }}
       >
         <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 lg:flex-row lg:items-center">
           <Reveal className="flex gap-6">
