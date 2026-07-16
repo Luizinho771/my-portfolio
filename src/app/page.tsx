@@ -1,3 +1,4 @@
+import CosmicBackground from "@/components/CosmicBackground";
 import Header from "@/components/Header";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
@@ -7,6 +8,7 @@ import Contact from "@/components/sections/Contact";
 export default function Home() {
   return (
     <>
+      <CosmicBackground />
       <Header />
       <main>
         <Hero />
