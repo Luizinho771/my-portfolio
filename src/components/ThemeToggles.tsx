@@ -6,6 +6,7 @@ import { useState } from "react";
  * Two independent toggles, each persisted and applied as a data-* attribute
  * on <html>. A blocking inline script in the root layout applies both before
  * first paint, so initial state can be read straight off <html> on the client.
+ * Monospace is the design default; the toggle switches to the sans/casual cut.
  */
 export default function ThemeToggles() {
   const [theme, setTheme] = useState<"dark" | "light">(() =>
@@ -16,8 +17,8 @@ export default function ThemeToggles() {
   );
   const [mono, setMono] = useState(
     () =>
-      typeof document !== "undefined" &&
-      document.documentElement.dataset.mono === "on"
+      typeof document === "undefined" ||
+      document.documentElement.dataset.mono !== "off"
   );
 
   const toggleTheme = () => {
@@ -47,10 +48,11 @@ export default function ThemeToggles() {
       <button
         onClick={toggleMono}
         className="cursor-pointer text-text/70 transition-colors hover:text-light"
-        aria-pressed={mono}
-        aria-label="Toggle monospace font"
+        aria-pressed={!mono}
+        aria-label="Toggle sans-serif font"
+        suppressHydrationWarning
       >
-        Mono
+        {mono ? "Sans" : "Mono"}
       </button>
     </div>
   );

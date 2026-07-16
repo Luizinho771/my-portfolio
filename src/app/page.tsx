@@ -1,22 +1,28 @@
 import CosmicBackground from "@/components/CosmicBackground";
 import Header from "@/components/Header";
-import Hero from "@/components/sections/Hero";
+import SocialSidebar from "@/components/SocialSidebar";
+import SocialLinks from "@/components/SocialLinks";
 import About from "@/components/sections/About";
+import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
-import Contact from "@/components/sections/Contact";
+import Education from "@/components/sections/Education";
 
 export default function Home() {
   return (
     <>
       <CosmicBackground />
       <Header />
+      <SocialSidebar />
       <main>
-        <Hero />
         <About />
+        <Experience />
         <Projects />
-        <Contact />
+        <Education />
       </main>
-      <footer className="p-6 text-center text-sm text-text/50">
+      <footer className="flex flex-col items-center gap-4 p-6 text-center text-sm text-text/50">
+        <div className="lg:hidden">
+          <SocialLinks size={28} />
+        </div>
         © {new Date().getFullYear()} Luiz Paulo
       </footer>
     </>

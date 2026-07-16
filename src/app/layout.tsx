@@ -39,7 +39,7 @@ export default function RootLayout({
         <script
           // Apply persisted theme/mono before first paint to avoid FOUC
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;var m=localStorage.getItem("mono");if(m==="on")document.documentElement.dataset.mono="on";}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;var m=localStorage.getItem("mono");if(m==="off")document.documentElement.dataset.mono="off";}catch(e){}})();`,
           }}
         />
       </head>

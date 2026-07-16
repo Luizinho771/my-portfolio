@@ -6,12 +6,21 @@
   --tertiary: #be3144;
   --light: #e17564;
   --text: #ffffff;
+  --surface: #e3e1dc;
+  --surface-text: #09122c;
 
-  /* Recursive variable font axes — toggled via data-* attributes later */
-  --font-axis-mono: 0;
+  /* Recursive variable font axes — the design is monospace by default;
+     the "Sans" toggle sets data-mono="off" */
+  --font-axis-mono: 1;
   --font-axis-casl: 0;
-  --font-axis-crsv: 0.5;
+  --font-axis-crsv: 0;
   --font-axis-slnt: 0;
+}
+
+[data-mono="off"] {
+  --font-axis-mono: 0;
+  --font-axis-casl: 0.5;
+  --font-axis-crsv: 0.5;
 }
 
 [data-theme="light"] {
@@ -20,12 +29,8 @@
   --tertiary: #872341;
   --light: #a52a3c;
   --text: #09122c;
-}
-
-[data-mono="on"] {
-  --font-axis-mono: 1;
-  --font-axis-casl: 0;
-  --font-axis-crsv: 0;
+  --surface: #ffffff;
+  --surface-text: #09122c;
 }
 
 [data-theme="light"] .social-icon {
@@ -38,6 +43,8 @@
   --color-tertiary: var(--tertiary);
   --color-light: var(--light);
   --color-text: var(--text);
+  --color-surface: var(--surface);
+  --color-surface-text: var(--surface-text);
   --font-sans: var(--font-recursive);
 }
 
