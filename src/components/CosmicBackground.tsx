@@ -61,6 +61,9 @@ export default function CosmicBackground() {
       const h = window.innerHeight;
       ctx.clearRect(0, 0, w, h);
 
+      const isLightTheme = document.documentElement.dataset.theme === "light";
+      const baseColor = isLightTheme ? "9, 18, 44" : "255, 255, 255";
+
       stars.forEach((star, i) => {
         if (!reducedMotion) {
           star.y += star.driftSpeed * dt;
@@ -73,7 +76,7 @@ export default function CosmicBackground() {
           ? 1
           : 0.7 + 0.3 * Math.sin(time / 1000 * star.twinkleSpeed + star.twinklePhase);
         const alpha = star.baseAlpha * twinkle;
-        const color = i % 17 === 0 ? ACCENT_COLOR : "255, 255, 255";
+        const color = i % 17 === 0 ? ACCENT_COLOR : baseColor;
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(${color}, ${alpha})`;
@@ -100,10 +103,20 @@ export default function CosmicBackground() {
     window.addEventListener("resize", resize);
     document.addEventListener("visibilitychange", onVisibilityChange);
 
+    // Under reduced motion draw() runs once, so repaint on theme change
+    const themeObserver = new MutationObserver(() => {
+      if (reducedMotion) draw(performance.now());
+    });
+    themeObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+
     return () => {
       cancelAnimationFrame(rafId);
       window.removeEventListener("resize", resize);
       document.removeEventListener("visibilitychange", onVisibilityChange);
+      themeObserver.disconnect();
     };
   }, []);
 

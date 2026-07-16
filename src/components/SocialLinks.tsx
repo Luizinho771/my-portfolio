@@ -29,7 +29,7 @@ export default function SocialLinks() {
           rel="noopener noreferrer"
           className="px-4 transition-opacity hover:opacity-70"
         >
-          <Image src={icon} alt={alt} width={48} height={48} />
+          <Image src={icon} alt={alt} width={48} height={48} className="social-icon" />
         </a>
       ))}
     </div>

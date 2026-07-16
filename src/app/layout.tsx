@@ -20,7 +20,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${recursive.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${recursive.variable} h-full antialiased`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script
+          // Apply persisted theme/mono before first paint to avoid FOUC
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;var m=localStorage.getItem("mono");if(m==="on")document.documentElement.dataset.mono="on";}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

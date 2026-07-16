@@ -14,6 +14,24 @@
   --font-axis-slnt: 0;
 }
 
+[data-theme="light"] {
+  --primary: #f4f1ec;
+  --secondary: #be3144;
+  --tertiary: #872341;
+  --light: #a52a3c;
+  --text: #09122c;
+}
+
+[data-mono="on"] {
+  --font-axis-mono: 1;
+  --font-axis-casl: 0;
+  --font-axis-crsv: 0;
+}
+
+[data-theme="light"] .social-icon {
+  filter: invert(1);
+}
+
 @theme inline {
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);

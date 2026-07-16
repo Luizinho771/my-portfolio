@@ -1,6 +1,7 @@
 "use client";
 
 import { useActiveSection } from "@/hooks/useActiveSection";
+import ThemeToggles from "@/components/ThemeToggles";
 
 const SECTIONS = [
   { id: "home", label: "Home" },
@@ -20,20 +21,23 @@ export default function Header() {
         <a href="#home" className="text-lg font-bold">
           Luiz Paulo
         </a>
-        <ul className="flex gap-6">
-          {SECTIONS.map(({ id, label }) => (
-            <li key={id}>
-              <a
-                href={`#${id}`}
-                className={`transition-colors hover:text-light ${
-                  activeSection === id ? "text-light" : "text-text/70"
-                }`}
-              >
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center gap-8">
+          <ul className="flex gap-6">
+            {SECTIONS.map(({ id, label }) => (
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  className={`transition-colors hover:text-light ${
+                    activeSection === id ? "text-light" : "text-text/70"
+                  }`}
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <ThemeToggles />
+        </div>
       </nav>
     </header>
   );
