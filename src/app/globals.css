@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #09122c;
+  --secondary: #872341;
+  --tertiary: #be3144;
+  --light: #e17564;
+  --text: #ffffff;
+
+  /* Recursive variable font axes — toggled via data-* attributes later */
+  --font-axis-mono: 0;
+  --font-axis-casl: 0;
+  --font-axis-crsv: 0.5;
+  --font-axis-slnt: 0;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-light: var(--light);
+  --color-text: var(--text);
+  --font-sans: var(--font-recursive);
+}
+
+body {
+  background: var(--primary);
+  color: var(--text);
+  font-family: var(--font-recursive), sans-serif;
+  font-variation-settings:
+    "MONO" var(--font-axis-mono),
+    "CASL" var(--font-axis-casl),
+    "CRSV" var(--font-axis-crsv),
+    "slnt" var(--font-axis-slnt);
+}
