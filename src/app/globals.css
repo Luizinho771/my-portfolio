@@ -23,6 +23,10 @@
   --font-sans: var(--font-recursive);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--primary);
   color: var(--text);

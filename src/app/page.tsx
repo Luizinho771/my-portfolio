@@ -1,44 +1,21 @@
-import Image from "next/image";
-
-const socialLinks = [
-  {
-    href: "https://www.linkedin.com/in/luizpaulo771/",
-    icon: "/icons/Linkedin.png",
-    alt: "LinkedIn",
-  },
-  {
-    href: "https://github.com/Luizinho771",
-    icon: "/icons/Github.png",
-    alt: "GitHub",
-  },
-  {
-    href: "https://instagram.com/1zpaulo/",
-    icon: "/icons/Instagram.png",
-    alt: "Instagram",
-  },
-];
+import Header from "@/components/Header";
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
+import Projects from "@/components/sections/Projects";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
     <>
-      <main className="flex h-[80vh] items-center justify-center">
-        <p>This site is under construction. Please check back soon!</p>
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Contact />
       </main>
-      <footer className="flex flex-col items-center gap-4 p-4 text-center">
-        <p>While you wait check my other links:</p>
-        <div className="flex items-center justify-center">
-          {socialLinks.map(({ href, icon, alt }) => (
-            <a
-              key={alt}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4"
-            >
-              <Image src={icon} alt={alt} width={48} height={48} />
-            </a>
-          ))}
-        </div>
+      <footer className="p-6 text-center text-sm text-text/50">
+        © {new Date().getFullYear()} Luiz Paulo
       </footer>
     </>
   );
